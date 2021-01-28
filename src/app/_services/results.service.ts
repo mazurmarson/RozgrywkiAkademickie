@@ -37,7 +37,12 @@ constructor(private http: HttpClient) {
 
  getSeasonResult()
  {
-   return this.http.get(this.baseUrl + 'results/seasonResults');
+   return this.http.get(this.baseUrl + 'results/seasonResults/1');
+ }
+
+ getSeasonResultArchive(id:number)
+ {
+   return this.http.get(this.baseUrl + 'results/seasonResults/'+id);
  }
 
 }

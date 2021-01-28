@@ -15,6 +15,7 @@ import { EditFieldComponent } from "./adminComponents/fieldOfStudy/EditField/Edi
 import { FieldOfStudyComponent } from "./adminComponents/fieldOfStudy/fieldOfStudy.component";
 import { LogComponent } from "./generalComponents/log/log.component";
 import { ResultsComponent } from "./generalComponents/Results/Results.component";
+import { ResultsArchiveComponent } from "./generalComponents/resultsArchive/resultsArchive.component";
 import { UserComponent } from "./userComponets/user/user.component";
 import { FieldOfStudyService } from "./_services/fieldOfStudy.service";
 
@@ -73,6 +74,9 @@ export const appRoutes: Routes = [
 },
 {
     path: 'selectField/:id/addResult/:id2', component:AddResultComponent
+},
+{
+    path: 'resultsArchive', component:ResultsArchiveComponent
 }
 
 

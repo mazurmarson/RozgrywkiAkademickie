@@ -2,6 +2,7 @@
 <table  class="table">
     <thead>
       <tr>
+        <th></th>
         <th scope="col">Data</th>
         <th scope="col">Sport</th>
    
@@ -10,7 +11,7 @@
     <tbody>
       <tr *ngFor="let competition of competitions">
 
-     
+        <td><img width="100px" src="{{competition.photoUrl}}"></td>
         <td>{{competition.date}}</td>
         <td>{{competition.sportName}}</td>
         

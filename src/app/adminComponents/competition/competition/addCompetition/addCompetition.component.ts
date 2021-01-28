@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CompetitionsService } from 'src/app/_services/competitions.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { CompetitionsService } from 'src/app/_services/competitions.service';
 })
 export class AddCompetitionComponent implements OnInit {
 
-  constructor(private competitionService: CompetitionsService, private route: ActivatedRoute) { }
+  constructor(private competitionService: CompetitionsService, private route: ActivatedRoute, public router: Router) { }
   model:any ={};
   id:number;
   
@@ -27,7 +27,7 @@ export class AddCompetitionComponent implements OnInit {
     console.log(this.model);
     this.competitionService.addCompetition(this.id ,this.model).subscribe( next => {
       console.log('Dodano zawody');
-      
+      this.router.navigate(['/competition']);
     }, error => {
       console.log(error);
     });

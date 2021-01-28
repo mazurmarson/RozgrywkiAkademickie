@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SportsService } from 'src/app/_services/sports.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { SportsService } from 'src/app/_services/sports.service';
 })
 export class AddSportComponent implements OnInit {
 model:any = {};
-  constructor(private sportService: SportsService) { }
+  constructor(private sportService: SportsService, public router: Router) { }
 
   ngOnInit() {
   }
@@ -17,6 +18,7 @@ model:any = {};
   {
     this.sportService.addSport(this.model).subscribe( next => {
       console.log('Dodano sport');
+      this.router.navigate(['/sports']);
     }, error => {
       console.log(error);
     });

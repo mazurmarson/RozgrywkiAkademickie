@@ -25,6 +25,7 @@ import { EditFieldComponent } from './adminComponents/fieldOfStudy/EditField/Edi
 import { CompetitionResultsComponent } from './adminComponents/CompetitionResults/CompetitionResults.component';
 import { SelectFieldComponent } from './adminComponents/CompetitionResults/selectField/selectField.component';
 import { AddResultComponent } from './adminComponents/CompetitionResults/addResult/addResult.component';
+import { ResultsArchiveComponent } from './generalComponents/resultsArchive/resultsArchive.component';
 @NgModule({
   declarations: [	
     AppComponent,
@@ -45,7 +46,8 @@ import { AddResultComponent } from './adminComponents/CompetitionResults/addResu
       EditFieldComponent, 
       CompetitionResultsComponent,
       SelectFieldComponent,
-      AddResultComponent
+      AddResultComponent,
+      ResultsArchiveComponent
      
    ],
   imports: [
