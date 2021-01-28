@@ -1,0 +1,28 @@
+
+<table  class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nazwa</th>
+   
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sport of sports">
+
+        <td>{{sport.id}}</td>
+        <td>{{sport.name}}</td>
+        
+
+        <td>
+          
+        
+          <button  [routerLink]="['/addCompetition/'+sport.id]" class="btn btn-info">Wybierz</button>
+          
+
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>

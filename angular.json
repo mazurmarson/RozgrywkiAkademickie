@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "RozgrywkiAkademickieSpa"
+  "defaultProject": "RozgrywkiAkademickieSpa",
+  "cli": {
+    "analytics": false
+  }
 }

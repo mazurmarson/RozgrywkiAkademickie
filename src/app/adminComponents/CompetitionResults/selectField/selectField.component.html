@@ -1,0 +1,29 @@
+
+
+<table  class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Data rozpoczęcia studiów</th>
+   
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let field of fields">
+
+        <td>{{field.name}}</td>
+        <td>{{field.startStudies}}</td>
+        
+
+        <td>
+          
+      
+          <button [routerLink]="['addResult/',field.id]"   class="btn btn-info">Wybierz</button>
+          
+
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>

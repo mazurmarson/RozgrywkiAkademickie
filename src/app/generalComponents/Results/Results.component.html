@@ -1,0 +1,21 @@
+<h2 class="text-center">Punktacja</h2>
+<div class="container">
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Kierunek</th>
+      <th scope="col">Punkty</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let result of results">
+      
+      <td>{{result.fieldName}}</td>
+      <td>{{result.points}}</td>
+      
+    </tr>
+
+  </tbody>
+</table>
+</div>
