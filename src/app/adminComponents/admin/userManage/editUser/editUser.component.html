@@ -1,0 +1,35 @@
+<form class="rounded border-info border container my-2"   >
+  <h2 class="text-center text-success font-weight-bold mt-2">Dodaj</h2>
+  <hr>
+  <div class="form-group">
+   
+    <input type="text" class="form-control" placeholder="Nazwa" name="name"  [(ngModel)]="model.login">
+  </div>
+  <div class="form-group">
+   
+    <input type="password" class="form-control"  placeholder="Hasło" name="password"  [(ngModel)]="model.password">
+  </div>
+
+  <div class="form-group">
+   
+    <input type="text" class="form-control"  placeholder="Adres e-mail" name="email"  [(ngModel)]="model.email">
+  </div>
+
+  <div class="form-group">
+    <label>Stanowisko:</label>
+    <select name="rank" [(ngModel)]="model.rank" class="form-control"  >
+      <option  *ngFor="let rank of ranks" [ngValue]="rank">{{rank}}</option>
+  
+  
+    </select>
+  </div>
+
+
+ 
+  <div class="form-group text-center my-4">
+    <button (click)="editUser()" class="btn btn-success" type="submit">Dodaj</button>
+    <button [routerLink]="['/usersManage']"  class="btn btn-light">Wróć</button>
+
+
+  </div>
+</form> 

@@ -3,6 +3,9 @@ import { AdminComponent } from "./adminComponents/admin/admin.component";
 import { AddSportComponent } from "./adminComponents/admin/sport/sport/addSport/addSport.component";
 import { EditSportComponent } from "./adminComponents/admin/sport/sport/editSport/editSport.component";
 import { SportComponent } from "./adminComponents/admin/sport/sport/sport.component";
+import { AddUserComponent } from "./adminComponents/admin/userManage/addUser/addUser.component";
+import { EditUserComponent } from "./adminComponents/admin/userManage/editUser/editUser.component";
+import { UserManageComponent } from "./adminComponents/admin/userManage/userManage.component";
 import { AddCompetitionComponent } from "./adminComponents/competition/competition/addCompetition/addCompetition.component";
 import { CompetitionComponent } from "./adminComponents/competition/competition/competition.component";
 import { EditCompetitionComponent } from "./adminComponents/competition/competition/editCompetition/editCompetition.component";
@@ -77,6 +80,15 @@ export const appRoutes: Routes = [
 },
 {
     path: 'resultsArchive', component:ResultsArchiveComponent
+},
+{
+    path: 'usersManage', component:UserManageComponent
+},
+{
+    path: 'addUser', component:AddUserComponent
+},
+{
+    path: 'editUser/:id', component:EditUserComponent
 }
 
 

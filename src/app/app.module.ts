@@ -26,6 +26,16 @@ import { CompetitionResultsComponent } from './adminComponents/CompetitionResult
 import { SelectFieldComponent } from './adminComponents/CompetitionResults/selectField/selectField.component';
 import { AddResultComponent } from './adminComponents/CompetitionResults/addResult/addResult.component';
 import { ResultsArchiveComponent } from './generalComponents/resultsArchive/resultsArchive.component';
+import { UserManageComponent } from './adminComponents/admin/userManage/userManage.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { AddUserComponent } from './adminComponents/admin/userManage/addUser/addUser.component';
+import { EditUserComponent } from './adminComponents/admin/userManage/editUser/editUser.component';
+
+export function tokenGetter()
+{
+  return localStorage.getItem('token');
+}
+
 @NgModule({
   declarations: [	
     AppComponent,
@@ -47,7 +57,10 @@ import { ResultsArchiveComponent } from './generalComponents/resultsArchive/resu
       CompetitionResultsComponent,
       SelectFieldComponent,
       AddResultComponent,
-      ResultsArchiveComponent
+      ResultsArchiveComponent,
+      UserManageComponent,
+      AddUserComponent,
+      EditUserComponent
      
    ],
   imports: [
@@ -55,7 +68,16 @@ import { ResultsArchiveComponent } from './generalComponents/resultsArchive/resu
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    JwtModule.forRoot({
+      config: {
+         tokenGetter,
+         allowedDomains: ['localhost:5000'],
+         disallowedRoutes: ['localhost:5000/api/auth']
+
+      }
+
+   }),
   ],
   providers: [],
   bootstrap: [AppComponent]
